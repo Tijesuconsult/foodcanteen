@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="foodpage.css">
+    <link rel="stylesheet" href="foodproduct.css">
     <link rel="stylesheet" href="./icon/all.min.css">
     <title>foodsite</title>
 </head>
 <body>
+    <div id="loader">
+      <i class="fa fa-spin" style="margin: 30% 50%;"> 
+        <div style="border: 10px solid black; width: 60px; height: 60px; border-radius: 50%; background-color: transparent; border-top-color: blue; border-bottom-color: crimson; border-top-style: dotted;"></div></i> 
+    </div>
     <!-- HEADER 1 -->
     <header class="header1">
         <div class="leftside">
@@ -17,7 +22,8 @@
             <p>FAQs</p>
         </div>
         <div class="rightside">
-           <p id="accName"></p>
+          <p id="date">Date:</p>
+            <p id="time" style="background-color: brown; border: none;">Time:</p>
            <p>USD</p>
            <p>EN</p>
         </div>
@@ -32,7 +38,7 @@
             <div style="display: flex;">
                 <form action="" style="margin-right: 250px;">
                 <input type="search" placeholder="search" class="search">
-                    <button id="search"><i class="fa fa-search"></i></button>
+                <i class="fa fa-search" onclick="search()"></i>
                 </form>
                 <div class="reg">
                     <a href="register.html"></a><i class="fa fa-user" style="font-size: 30px";></i>
@@ -41,23 +47,63 @@
             </div>
         </div>
 
+        <!-- <div class="header"> -->
+           
+        <!-- </div> -->
     </header>
     
     <!-- NAVBAR -->
     <section>
+        <!-- <button type="button" class="btn btn-primary">
+            Notifications <span class="badge bg-secondary">0</span>
+          </button> -->
+
         <nav class="nav">
             <div class="link">
                 <a href="index.html">HOME</a>
                 <a href="">FOODS</a>
-                <a href="">MY FOOD</a>
+                <div> 
+                    <a href="" class="showcart" id="showcart">CART</a>
+                <!-- <a href="" id="mySaveFood">CART</a> -->
+            </div>
                 <a href="">OUR SERVICES</a>
                 <a href="">ABOUT US</a>
+
+                <div class="cart" style="float: right; position: relative; bottom: 5px;">
+                    <div> 
+                      <i class="fa-solid fa-cart-shopping" onclick="showcart()" style="cursor: pointer;"></i>
+                    </div>
+                  <p id="count">0</p>
+                  </div>
             </div>
         </nav>
     </section>
->
+   <i><marquee behavior="" direction="" style="margin-top: 20px; font-size: 30px; font-weight: 700; color: brown;">WELCOME TO BLESSED FOOD CANTEEN WHERE YOU CAN GET A GOOD AND DELICIOUS FOOD... PLEASE MAKE YOUR ORDER</marquee></i>
+    <!-- FOOD SECTION -->
 
+<div class="container">
+    <div id="root"></div>
+    <div class="sidebar" id="sidebar">
+        <div class="head" style="gap: 200px;">
+            <p>My Cart</p>
+            <i class="fa fa-close" onclick="closecart()" style="cursor: pointer;"></i>
+        </div>
+        <div id="cartItem">Your Cart is Empty</div>
+        <div class="foot">
+            <h3>Total</h3>
+            <h2 id="total"># 0.00</h2>
+        </div>
+    </div>
+</div>
+    <!-- CART SECTION -->
+    <div id="allcart">
+        <strong>MY CART</strong>
+        <i class="fa fa-close" id="close" onclick="closeBut()"></i>
+        <p id="cart"></p>
+        <!-- <button>Order</button> -->
+    </div>
     <!-- <script src="foodpage.js"></script> -->
-    <script src="login.js"></script>
+    <script src="foodproduct.js"></script>
+    <!-- <script src="login.js"></script> -->
 </body>
 </html>

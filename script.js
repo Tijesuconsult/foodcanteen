@@ -7,14 +7,21 @@ let userName = document.getElementById('userName')
 let password = document.getElementById('password')
 let confPss = document.getElementById('confPass')
 
+let otp = document.getElementById('otp')
+let otpdisplay = document.getElementById('otpdisplay')
+let otpGenerator = document.getElementById('otp-generator')
+
 let errname = document.getElementById('errname')
 let errlastname = document.getElementById('errlastname')
 let erremail = document.getElementById('erremail')
 let errusername = document.getElementById('errusername')
 let errpass = document.getElementById('errpass')
 let errconfpass = document.getElementById('errconfpass')
+let = errotp = document.getElementById('errotp')
 
 let butt = document.getElementById('butt')
+
+let digits = Math.floor(Math.random()*1234567)+1;
 
 
 butt.onclick = function() {
@@ -42,6 +49,9 @@ userName.style.border = '1px solid red'
 // errusername.innerHTML = 'Required'
 // errusername.style.color = 'red'
 }
+// else if(userName.value == localStorage.getItem(userName)){
+//     alert('User Name is already Exit')
+// }
 
 if(password.value == ''){
 // errconfpass.innerHTML = 'Ivalid'
@@ -56,6 +66,18 @@ confPss.style.border = '1px solid red'
 else if(confPss.value == ''){
 confPss.style.border = '1px solid red'
 }
+
+else if(otp.value == ''){
+    otp.style.border = '1px solid red'
+    otpdisplay.innerHTML = 'Please Generate OTP'
+    otpdisplay.style.fontStyle = 'italic'
+    // alert('Please Generate OTP')
+}
+else if(otp.value != digits){
+    otpdisplay.innerHTML = 'Invalid OTP'
+    otpdisplay.style.color = 'red'
+}
+
 else{
     // let names = [];
     // if(localStorage.getItem('namas')){
@@ -65,7 +87,7 @@ else{
     // const dataUsers = JSON.stringify(names)
     // localStorage.setItem('names', dataUsers)
 
-    allform.style.display = 'none'
+    // allform.style.display = 'none'
     window.location.href = "Login.html"
     localStorage.setItem('FirstName',name.value)
     localStorage.setItem('lastName',lastName.value)
@@ -78,7 +100,15 @@ else{
 }
 }
 
-
+otpGenerator.onclick = function(){
+otp.value = digits
+otp.style.color = 'blue'
+otp.style.fontSize = '20px'
+}
+otpGenerator.style.padding = '5px'
+otpGenerator.style.backgroundColor = 'red'
+otpGenerator.style.color = 'white'
+otpGenerator.style.border = '1px solid transparent'
 // for (let i = 0; i < localStorage.length; i++){
 
 // }

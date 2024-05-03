@@ -23,9 +23,9 @@ login1.onclick = function(){
         alert('Password does not Exit')
     }
     else{
-    alert('Successful')
-    loginUser.value = localStorage.getItem('UserName')
-    userPassword.value = localStorage.getItem('Password')
+    alert('Hello! ' + localStorage.getItem('UserName') +' Welcome to Blessed Food Canteen' )
+    // loginUser.value = localStorage.getItem('UserName')
+    // userPassword.value = localStorage.getItem('Password')
     window.location.href = 'foodpage.html'
     // accName.innerHTML = `Hi! ${localStorage.getItem('UserName')}`
     
