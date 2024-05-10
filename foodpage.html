@@ -13,6 +13,8 @@
       <i class="fa fa-spin" style="margin: 30% 50%;"> 
         <div style="border: 10px solid black; width: 60px; height: 60px; border-radius: 50%; background-color: transparent; border-top-color: blue; border-bottom-color: crimson; border-top-style: dotted;"></div></i> 
     </div>
+    <!-- SECTION 1 -->
+    <section style="background-color: rgba(218, 165, 32, 0.568); padding: 10px 0px;">
     <!-- HEADER 1 -->
     <header class="header1">
         <div class="leftside">
@@ -23,7 +25,7 @@
         </div>
         <div class="rightside">
           <p id="date">Date:</p>
-            <p id="time" style="background-color: brown; border: none;">Time:</p>
+            <p id="time" style="background-color: black; border: none;">Time:</p>
            <p>USD</p>
            <p>EN</p>
         </div>
@@ -41,8 +43,15 @@
                 <i class="fa fa-search" onclick="search()"></i>
                 </form>
                 <div class="reg">
-                    <a href="register.html"></a><i class="fa fa-user" style="font-size: 30px";></i>
-                    <a href="Login.html">Logout</a>
+                <div style="display: block; justify-content: center; align-items: center; text-align: center;">
+                    <a href="register.html"></a>
+                    <img src="" alt="" id="imgDisplay">
+                    <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                    <h1 id="nameuser">Hi!</h1>
+                    <a href="Login.html" style="color: black;" id="logout">Logout</a>
+                </div>
+                </div>
+                    <!-- <a href="Login.html">Logout</a> -->
                 </div>
             </div>
         </div>
@@ -51,9 +60,9 @@
            
         <!-- </div> -->
     </header>
-    
+</section>
     <!-- NAVBAR -->
-    <section>
+    <section style="position: sticky; top: 0px; width: 100%; margin-top: 0px;">
         <!-- <button type="button" class="btn btn-primary">
             Notifications <span class="badge bg-secondary">0</span>
           </button> -->
@@ -75,10 +84,11 @@
                     </div>
                   <p id="count">0</p>
                   </div>
+                 
             </div>
         </nav>
     </section>
-   <i><marquee behavior="" direction="" style="margin-top: 20px; font-size: 30px; font-weight: 700; color: brown;">WELCOME TO BLESSED FOOD CANTEEN WHERE YOU CAN GET A GOOD AND DELICIOUS FOOD... PLEASE MAKE YOUR ORDER</marquee></i>
+   <i><marquee behavior="" direction="" style="margin-top: 20px; font-size: 30px; font-weight: 700; color: goldenrod;">WELCOME TO BLESSED FOOD CANTEEN WHERE YOU CAN GET A GOOD AND DELICIOUS FOOD... PLEASE MAKE YOUR ORDER</marquee></i>
     <!-- FOOD SECTION -->
 
 <div class="container">

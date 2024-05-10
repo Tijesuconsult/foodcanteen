@@ -10,7 +10,7 @@ window.addEventListener('load', function(){
   showLoader()
 })
 function timeConsumingTask(){
-  const duration = 5000;
+  const duration = 3000;
   return new Promise(resolve =>{
     setTimeout(()=>{
       resolve();
@@ -216,6 +216,14 @@ function myTimer(){
     let t = new Date();
     document.getElementById('time').innerHTML = t.toLocaleTimeString()
 }
+let nameuser = document.getElementById('nameuser')
+let imgDisplay = document.getElementById('imgDisplay')
+let logout = document.getElementById('logout')
+
+//nameuser.addEventListener('click', function(){
+    nameuser.innerText += " " + localStorage.getItem('UserName').toLocaleUpperCase()
+    imgDisplay.src = localStorage.getItem('upload')
+//})
 
 
 // let root = document.getElementById('root')

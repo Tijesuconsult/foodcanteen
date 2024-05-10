@@ -7,6 +7,7 @@ let password = document.getElementById('password')
 let userName = document.getElementById('userName')
 
 let accName = document.getElementById('accName')
+let nameuser = document.getElementById('nameuser')
 
 login1.onclick = function(){
     if(loginUser.value == ''){
@@ -27,6 +28,7 @@ login1.onclick = function(){
     // loginUser.value = localStorage.getItem('UserName')
     // userPassword.value = localStorage.getItem('Password')
     window.location.href = 'foodpage.html'
+    nameuser = localStorage.getItem('UserName')
     // accName.innerHTML = `Hi! ${localStorage.getItem('UserName')}`
     
     // for(let i = 0; i < localStorage.length; i++){

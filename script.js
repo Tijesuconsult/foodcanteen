@@ -21,7 +21,7 @@ let = errotp = document.getElementById('errotp')
 
 let butt = document.getElementById('butt')
 
-let digits = Math.floor(Math.random()*1234567)+1;
+let digits = Math.floor(Math.random()*554567)+1;
 
 
 butt.onclick = function() {
@@ -95,6 +95,7 @@ else{
     localStorage.setItem('UserName',userName.value)
     localStorage.setItem('Password',password.value)
     localStorage.setItem('ConfirmPass',confPss.value)
+    
 
     // location.reload()
 }
@@ -106,7 +107,7 @@ otp.style.color = 'blue'
 otp.style.fontSize = '20px'
 }
 otpGenerator.style.padding = '5px'
-otpGenerator.style.backgroundColor = 'red'
+otpGenerator.style.backgroundColor = 'black'
 otpGenerator.style.color = 'white'
 otpGenerator.style.border = '1px solid transparent'
 // for (let i = 0; i < localStorage.length; i++){
